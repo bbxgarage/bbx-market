@@ -5,7 +5,8 @@ import './body.html';
 
 Template.body.helpers({
   tasks() {
-    return Tasks.find({})
+    // show newest tasks at the app
+    return Tasks.find({}, { sort: { text: -1 } });
   }
 });
 
