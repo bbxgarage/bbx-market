@@ -16,13 +16,13 @@ Template.body.helpers({
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
       // if hide completed is checked, filter tasks
-      return Tasks.find({ checked: { $ne: true } }, { sort : { createdAt: -1 } });
+      return Tasks.find({ owner: Meteor.userId(), checked: { $ne: true } }, { sort : { createdAt: -1 } });
     }
     // Otherwise, return all of the tasks
-    return Tasks.find({}, { sort: { createdAt: -1 } });
+    return Tasks.find({ owner: Meteor.userId() }, { sort: { createdAt: -1 } });
   },
   imcompleteTasks() {
-    return Tasks.find({ checked: { $ne: true } }).count();
+    return Tasks.find({ owner: Meteor.userId(), checked: { $ne: true } }).count();
   },
 });
 
