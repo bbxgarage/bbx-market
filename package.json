@@ -13,16 +13,17 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^4.4.0",
     "nuxt": "^1.0.0",
-    "vuetify": "^0.17.3",
-    "@nuxtjs/axios": "^4.4.0"
+    "vuetify": "^0.17.3"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
     "babel-eslint": "^8.2.1",
+    "cross-env": "^5.0.1",
     "eslint": "^4.15.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
+    "firebase": "^4.8.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }
